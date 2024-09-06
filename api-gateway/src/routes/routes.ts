@@ -24,38 +24,7 @@ export const ROUTES = [
         }
     },
     {
-        url: '/api/order/create',
-        auth: true,
-        rateLimit: {
-            windowMs: 10 * 60 * 1000,
-            max: 5
-        },
-        proxy: {
-            target: "http://localhost:4002",
-            changeOrigin: true,
-            pathRewrite: {
-                '^/api/order/create': '/order'
-            },
-        }
-    },
-
-    // {
-    //     url: '/api/order',
-    //     auth: true, 
-    //     rateLimit: {
-    //         windowMs: 10 * 60 * 1000,  
-    //         max: 5  /
-    //     },
-    //     proxy: {
-    //         target: "http://localhost:4002",
-    //         changeOrigin: true,
-    //         pathRewrite: {
-    //             '^/api/order/list': '/list'  
-    //         },
-    //     }
-    // },
-    {
-        url: '/api/getProducts',
+        url: '/api/product',
         auth: false,
         rateLimit: {
             windowMs: 30 * 60 * 1000,
@@ -64,9 +33,6 @@ export const ROUTES = [
         proxy: {
             target: "http://localhost:4001",
             changeOrigin: true,
-            pathRewrite: {
-                '^/api/product': '/products'
-            },
         }
     },
     {
@@ -79,9 +45,19 @@ export const ROUTES = [
         proxy: {
             target: "http://localhost:4001",
             changeOrigin: true,
-            pathRewrite: {
-                '^/api/product': '/product'
-            },
+        }
+    },
+    {
+
+        url: '/api/wishlist',
+        auth: true,
+        rateLimit: {
+            windowMs: 10 * 60 * 1000,
+            max: 20
+        },
+        proxy: {
+            target: "http://localhost:4004",
+            changeOrigin: true,
         }
     }
 ];

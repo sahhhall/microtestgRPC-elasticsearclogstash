@@ -30,3 +30,5 @@ router.post('/wishlist', async (req: any, res: Response) => {
 
     res.status(201).send(wishlist);
 });
+
+export { router as wishlistCreate }
