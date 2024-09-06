@@ -6,9 +6,12 @@ import { NotFoundError } from '@sahhhallecom/common';
 const router = express.Router();
 
 
-router.post('/wishlist', async (req: any, res: Response) => {
+router.post('/', async (req: any, res: Response) => {
     const { productId } = req.body;
+    console.log(req.user);
     const { id } = req.user ;
+  
+    // const id = "123";
     const product = await Product.findById(productId);
 
     if (!product) {

@@ -3,6 +3,7 @@ import {
     errorHandler,
     userDataMiddleware
 } from "@sahhhallecom/common";
+import "express-async-errors";
 import { wishlistCreate } from "./routes/create";
 import { wishlistShow } from "./routes/show";
 

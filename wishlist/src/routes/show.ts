@@ -4,7 +4,7 @@ import { Product } from '../models/product';
 import { NotFoundError } from '@sahhhallecom/common';
 
 const router = express.Router();
-router.get('/wishlist', async (req: any, res: Response) => {
+router.get('/', async (req: any, res: Response) => {
     const userId = req.user.id;
 
     const wishlist = await Wishlist.findOne({ userId }).populate('products');
