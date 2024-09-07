@@ -5,6 +5,7 @@ import {
 } from "@sahhhallecom/common";
 import { createProduct } from "./routes/create";
 import { getAllProducts } from "./routes/show";
+import { updateRouter } from "./routes/update";
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.json());
 
 app.use(createProduct);
 app.use(getAllProducts);
+app.use(updateRouter)
 app.use(errorHandler);
 
 export { app };

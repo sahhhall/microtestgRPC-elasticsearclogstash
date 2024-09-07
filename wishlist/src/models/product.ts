@@ -5,6 +5,7 @@ interface ProductAttr {
     name: string;
     price: number;
     quantity: number;
+    id: string;
 }
 
 // prorperties availabale in existring document
@@ -45,7 +46,12 @@ const productSchema = new mongoose.Schema(
 );
 
 productSchema.statics.build = (atts: ProductAttr) => {
-    return new Product(atts);
+    return new Product({
+        name: atts.name,
+        price: atts.price,
+        quantity: atts.quantity,
+        _id: atts.id
+    });
 }
 
 

@@ -24,14 +24,14 @@ export const ROUTES = [
         }
     },
     {
-        url: '/api/product',
+        url: '/api/products',
         auth: false,
         rateLimit: {
             windowMs: 30 * 60 * 1000,
             max: 20
         },
         proxy: {
-            target: "http://localhost:4001",
+            target: "http://localhost:4000",
             changeOrigin: true,
         }
     },
@@ -43,7 +43,7 @@ export const ROUTES = [
             max: 20
         },
         proxy: {
-            target: "http://localhost:4001",
+            target: "http://localhost:4000",
             changeOrigin: true,
         }
     },

@@ -2,7 +2,7 @@
   "name": "wishlist",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
+  "scripts": {
     "start": "ts-node-dev src/index.ts"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
     "express": "^4.19.2",
     "express-async-errors": "^3.1.1",
     "express-validator": "^7.2.0",
+    "kafkajs": "^2.2.4",
     "mongoose": "^8.6.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.4"
