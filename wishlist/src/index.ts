@@ -8,7 +8,7 @@ import { consumeupdatedEvent } from "./events/consumers/product-updated";
 let port: number = 4004;
 
 
-  
+
 
 
 export async function startKafkaConsumer() {
@@ -17,7 +17,7 @@ export async function startKafkaConsumer() {
     await consumeEvent(consumer)
     await consumeupdatedEvent(consumer);
     await consumer.run();
-  }
+}
 
 (async () => {
     try {
@@ -39,4 +39,4 @@ export async function startKafkaConsumer() {
 // Graceful shutdown
 process.on('SIGINT', async () => {
     process.exit(0);
-  });
+});

@@ -9,9 +9,9 @@ export async function connectProducer() {
     console.log('Kafka Producer connected');
 }
 
-export async function connectToKafka() {
-    await producer.connect();
-}
+// export async function connectToKafka() {
+//     await producer.connect();
+// }
 
 export async function disconnectProducer() {
     await producer.disconnect();
