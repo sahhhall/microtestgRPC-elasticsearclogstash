@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@grpc/grpc-js": "^1.11.2",
+    "@grpc/proto-loader": "^0.7.13",
     "@sahhhallecom/common": "^1.0.18",
     "@types/express": "^4.17.21",
     "cookie-parser": "^1.4.6",
@@ -26,6 +28,8 @@
   "devDependencies": {
     "@types/cookie-parser": "^1.4.7",
     "@types/jsonwebtoken": "^9.0.6",
-    "@types/node": "^22.5.3"
+    "@types/node": "^22.5.3",
+    "grpc-tools": "^1.12.4",
+    "ts-protoc-gen": "^0.15.0"
   }
 }
